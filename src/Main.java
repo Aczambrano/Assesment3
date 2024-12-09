@@ -8,11 +8,9 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-
-        PatientView patientView = new PatientView();
-
+        Scanner scanner = new Scanner(System.in);
+        PatientView patientView = new PatientView(scanner);
         PatientController patientController = new PatientController(patientView);
-
         patientController.run();
     }
 }

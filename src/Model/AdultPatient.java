@@ -1,6 +1,7 @@
 package Model;
 
 import Model.DTO.AdultPatientDTO;
+import Model.DTO.PatientDTO;
 
 public class AdultPatient extends Patient {
 
@@ -8,14 +9,8 @@ public class AdultPatient extends Patient {
     private boolean smoker;
     private boolean alcoholism;
 
-    public AdultPatient(String name, int age, long ID) {
-        setName(name);
-        setID(ID);
-        setAge(age);
-    }
-
-    @Override
-    public void assignPatient(AdultPatientDTO patient) {
+    public AdultPatient(PatientDTO patientDTO, AdultPatientDTO patient) {
+        super(patientDTO);
         this.working = patient.isWorking();
         this.smoker = patient.isSmoker();
         this.alcoholism = patient.isAlcoholism();

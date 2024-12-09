@@ -15,23 +15,11 @@ public class AdultPatientDTO {
         return working;
     }
 
-    public void setWorking(boolean working) {
-        this.working = working;
-    }
-
     public boolean isSmoker() {
         return smoker;
     }
 
-    public void setSmoker(boolean smoker) {
-        this.smoker = smoker;
-    }
-
     public boolean isAlcoholism() {
         return alcoholism;
-    }
-
-    public void setAlcoholism(boolean alcoholism) {
-        this.alcoholism = alcoholism;
     }
 }

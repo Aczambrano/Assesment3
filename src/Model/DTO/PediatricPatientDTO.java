@@ -15,23 +15,13 @@ public class PediatricPatientDTO {
         return gestionalAge;
     }
 
-    public void setGestionalAge(int gestionalAge) {
-        this.gestionalAge = gestionalAge;
-    }
-
     public double getBirthWeight() {
         return birthWeight;
     }
 
-    public void setBirthWeight(double birthWeight) {
-        this.birthWeight = birthWeight;
-    }
 
     public boolean isInmunization() {
         return inmunization;
     }
 
-    public void setInmunization(boolean inmunization) {
-        this.inmunization = inmunization;
-    }
 }

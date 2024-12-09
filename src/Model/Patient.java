@@ -1,43 +1,29 @@
 package Model;
 
-import Model.DTO.AdultPatientDTO;
+
 import Model.DTO.PatientDTO;
-import Model.DTO.PediatricPatientDTO;
 
 public abstract class Patient {
     private String name;
     private int age;
     private long ID;
 
-    protected String getName() {
+    public Patient(PatientDTO patientDTO) {
+        this.name = patientDTO.getName();
+        this.age = patientDTO.getAge();
+        this.ID = patientDTO.getId();
+    }
+
+    public String getName() {
         return name;
     }
 
-    protected int getAge() {
+    public int getAge() {
         return age;
     }
 
-    protected long getID() {
+    public long getID() {
         return ID;
-    }
-
-    protected void setName(String name) {
-        this.name = name;
-    }
-
-    protected void setAge(int age) {
-        this.age = age;
-    }
-
-    protected void setID(long id) {
-        this.ID = id;
-    }
-
-    public void assignPatient(PediatricPatientDTO patient){
-
-    }
-
-    public void assignPatient(AdultPatientDTO patient){
     }
 
     public String toString() {

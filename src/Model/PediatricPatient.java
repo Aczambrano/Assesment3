@@ -1,5 +1,7 @@
 package Model;
 
+import Model.DTO.AdultPatientDTO;
+import Model.DTO.PatientDTO;
 import Model.DTO.PediatricPatientDTO;
 
 public class PediatricPatient extends Patient {
@@ -8,15 +10,8 @@ public class PediatricPatient extends Patient {
     private double birthWeight;
     private boolean immunization;
 
-    public PediatricPatient(String name, int age, long ID) {
-        setName(name);
-        setID(ID);
-        setAge(age);
-    }
-
-
-    @Override
-    public void assignPatient(PediatricPatientDTO patient) {
+    public PediatricPatient(PatientDTO patientDTO, PediatricPatientDTO patient) {
+        super(patientDTO);
         this.gestationalAge = patient.getGestionalAge();
         this.birthWeight = patient.getBirthWeight();
         this.immunization = patient.isInmunization();
