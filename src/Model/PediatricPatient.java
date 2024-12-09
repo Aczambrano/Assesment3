@@ -1,6 +1,4 @@
-package model;
-
-import model.interfaces.Patient;
+package Model;
 
 public class PediatricPatient extends Patient {
 
@@ -14,28 +12,12 @@ public class PediatricPatient extends Patient {
         setAge(age);
     }
 
-    public int getGestationalAge() {
-        return gestationalAge;
-    }
 
-    public void setGestationalAge(int gestationalAge) {
-        this.gestationalAge = gestationalAge;
-    }
-
-    public double getBirthWeight() {
-        return birthWeight;
-    }
-
-    public void setBirthWeight(double birthWeight) {
-        this.birthWeight = birthWeight;
-    }
-
-    public boolean hasImmunization() {
-        return immunization;
-    }
-
-    public void setImmunization(boolean immunization) {
-        this.immunization = immunization;
+    @Override
+    public void assignPatient(String[] attributes) {
+        this.gestationalAge = Integer.parseInt(attributes[0]);
+        this.birthWeight = Double.parseDouble(attributes[1]);
+        this.immunization = Boolean.parseBoolean(attributes[2]);
     }
 
     public String toString() {
@@ -45,7 +27,7 @@ public class PediatricPatient extends Patient {
         sb.append("ID: " + getID() + "\n");
         sb.append("Gestational Age: " + gestationalAge + "\n");
         sb.append("Birth Weight: " + birthWeight + "\n");
-        sb.append("Immunization: " + (hasImmunization() ? "Yes" : "No") + "\n");
+        sb.append("Immunization: " + (immunization ? "Yes" : "No") + "\n");
         return sb.toString();
     }
 }

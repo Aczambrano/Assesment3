@@ -1,4 +1,4 @@
-package model.interfaces;
+package Model;
 
 public abstract class Patient {
     private String name;
@@ -28,6 +28,8 @@ public abstract class Patient {
     protected void setID(long id) {
         this.ID = id;
     }
+
+    public abstract void assignPatient(String [] attributes);
 
     public String toString() {
         return null;
