@@ -1,5 +1,7 @@
 package Model;
 
+import Model.DTO.PediatricPatientDTO;
+
 public class PediatricPatient extends Patient {
 
     private int gestationalAge;
@@ -14,10 +16,10 @@ public class PediatricPatient extends Patient {
 
 
     @Override
-    public void assignPatient(String[] attributes) {
-        this.gestationalAge = Integer.parseInt(attributes[0]);
-        this.birthWeight = Double.parseDouble(attributes[1]);
-        this.immunization = Boolean.parseBoolean(attributes[2]);
+    public void assignPatient(PediatricPatientDTO patient) {
+        this.gestationalAge = patient.getGestionalAge();
+        this.birthWeight = patient.getBirthWeight();
+        this.immunization = patient.isInmunization();
     }
 
     public String toString() {

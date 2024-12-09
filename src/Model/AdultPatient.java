@@ -1,5 +1,7 @@
 package Model;
 
+import Model.DTO.AdultPatientDTO;
+
 public class AdultPatient extends Patient {
 
     private boolean working;
@@ -13,10 +15,10 @@ public class AdultPatient extends Patient {
     }
 
     @Override
-    public void assignPatient(String[] attributes) {
-        this.working = Boolean.parseBoolean(attributes[0]);
-        this.smoker = Boolean.parseBoolean(attributes[1]);
-        this.alcoholism = Boolean.parseBoolean(attributes[2]);
+    public void assignPatient(AdultPatientDTO patient) {
+        this.working = patient.isWorking();
+        this.smoker = patient.isSmoker();
+        this.alcoholism = patient.isAlcoholism();
     }
 
     public String toString() {

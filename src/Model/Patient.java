@@ -1,5 +1,9 @@
 package Model;
 
+import Model.DTO.AdultPatientDTO;
+import Model.DTO.PatientDTO;
+import Model.DTO.PediatricPatientDTO;
+
 public abstract class Patient {
     private String name;
     private int age;
@@ -29,7 +33,12 @@ public abstract class Patient {
         this.ID = id;
     }
 
-    public abstract void assignPatient(String [] attributes);
+    public void assignPatient(PediatricPatientDTO patient){
+
+    }
+
+    public void assignPatient(AdultPatientDTO patient){
+    }
 
     public String toString() {
         return null;
