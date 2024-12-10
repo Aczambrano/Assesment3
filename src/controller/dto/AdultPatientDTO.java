@@ -1,5 +1,5 @@
-package controller.dto;
 
+package controller.dto;
 public class AdultPatientDTO {
     private boolean working;
     private boolean smoker;
