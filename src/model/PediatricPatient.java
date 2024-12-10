@@ -1,8 +1,8 @@
-package Model;
+package model;
 
-import Model.DTO.AdultPatientDTO;
-import Model.DTO.PatientDTO;
-import Model.DTO.PediatricPatientDTO;
+import model.abstractions.Patient;
+import controller.dto.PatientDTO;
+import controller.dto.PediatricPatientDTO;
 
 public class PediatricPatient extends Patient {
 
@@ -19,9 +19,9 @@ public class PediatricPatient extends Patient {
 
     public String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append("Name: " + getName() + "\n");
-        sb.append("Age: " + getAge() + "\n");
-        sb.append("ID: " + getID() + "\n");
+        sb.append("Name: " + name + "\n");
+        sb.append("Age: " + age + "\n");
+        sb.append("ID: " + ID + "\n");
         sb.append("Gestational Age: " + gestationalAge + "\n");
         sb.append("Birth Weight: " + birthWeight + "\n");
         sb.append("Immunization: " + (immunization ? "Yes" : "No") + "\n");
