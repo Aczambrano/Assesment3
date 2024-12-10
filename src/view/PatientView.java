@@ -1,8 +1,8 @@
-package View;
+package view;
 
-import Model.DTO.AdultPatientDTO;
-import Model.DTO.PatientDTO;
-import Model.DTO.PediatricPatientDTO;
+import model.dto.AdultPatientDTO;
+import model.dto.PatientDTO;
+import model.dto.PediatricPatientDTO;
 
 import java.util.Scanner;
 

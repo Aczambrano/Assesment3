@@ -1,8 +1,7 @@
-package Model;
+package model;
 
-import Model.DTO.AdultPatientDTO;
-import Model.DTO.PatientDTO;
-import Model.DTO.PediatricPatientDTO;
+import model.dto.PatientDTO;
+import model.dto.PediatricPatientDTO;
 
 public class PediatricPatient extends Patient {
 

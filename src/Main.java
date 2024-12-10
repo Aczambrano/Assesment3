@@ -1,8 +1,7 @@
-import Controller.PatientController;
-import Model.AdultPatient;
-import Model.PediatricPatient;
-import Model.Patient;
-import View.PatientView;
+import controller.PatientController;
+import model.logs.ConsoleLogger;
+import model.logs.interfaces.Logger;
+import view.PatientView;
 
 import java.util.Scanner;
 
@@ -10,7 +9,8 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         PatientView patientView = new PatientView(scanner);
-        PatientController patientController = new PatientController(patientView);
+        Logger logger = new ConsoleLogger();
+        PatientController patientController = new PatientController(patientView,logger);
         patientController.run();
     }
 }

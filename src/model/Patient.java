@@ -1,7 +1,7 @@
-package Model;
+package model;
 
 
-import Model.DTO.PatientDTO;
+import model.dto.PatientDTO;
 
 public abstract class Patient {
     private String name;

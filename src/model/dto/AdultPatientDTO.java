@@ -1,4 +1,4 @@
-package Model.DTO;
+package model.dto;
 
 public class AdultPatientDTO {
     private boolean working;

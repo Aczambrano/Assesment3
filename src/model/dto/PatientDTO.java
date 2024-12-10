@@ -1,4 +1,4 @@
-package Model.DTO;
+package model.dto;
 
 public class PatientDTO {
     private String name;
